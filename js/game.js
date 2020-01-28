@@ -6,21 +6,21 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "You have two pills in your hand",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Red pill you have unintentionally summoned a demon",
+                    nextLevel: "darkvoid",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "Blue pill you have unintentionally summoned a genie",
+                    nextLevel: "lightvoid",
                 },
             ]
         },
 
-        cave: {
+        darkvoid: {
             background_image: "fire.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
             message: "You come across a fire monster or something!",
