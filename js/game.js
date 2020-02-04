@@ -2,38 +2,44 @@
 
 var game = {
     music: "98_Lost_Mine.mp3",
-    background_image: "intro-bg.jpg",
+    background_image: "red-pill-blue-pill-750x400.jpg",
     levels: {
 
         start: {
             message: "You have two pills in your hand",
             choices: [
                 {
-                    text: "Red pill you have unintentionally summoned a demon",
-                    nextLevel: "darkvoid",
+                    text: "Red pill ",
+                    nextLevel: "field",
                 },
 
                 {
-                    text: "Blue pill you have unintentionally summoned a genie",
+                    text: "Blue pill ",
                     nextLevel: "lightvoid",
                 },
             ]
         },
 
-        darkvoid: {
-            background_image: "fire.gif",
+        lightvoid: {
+            background_image: "source.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: "You now have a genie how will you use your wishes",
             choices: [
                 {
-                    text: "Start over",
-                    nextLevel: "start",
+                    text: "Good",
+                    nextLevel: "clouds",
+                },
+
+                {
+                    text: "bad",
+                    nextLevel: "rockymountains",
                 },
             ]
         },
 
         field: {
-            message: "Some adventurer you are...",
+            background_image: "50cent.jpg",
+            message: "great you took a tylenol you didn't have any pain but its alright",
             choices: [
                 {
                     text: "Start over",
@@ -41,6 +47,35 @@ var game = {
                 },
             ]
         },
-
+        rockymountains: {
+            background_image: "nice.jpg",
+            message: "It seems you have decided to reconsider",
+            choices: [
+                {
+                    text: "lets see what you are capable of",
+                    nextLevel: "kingdom",
+                },
+            ]
+        },
+        clouds: {
+            background_image: "tenor.gif",
+            message: "",
+            choices: [
+                {
+                    text: "care to reconsider",
+                    nextLevel: "start"
+                },
+            ]
+        },
+        kingdom: {
+            background_image: "spee.gif",
+            message: "You have achieved world domination",
+            choices: [
+                {
+                    text: "I'm proud of you",
+                    nextLevel: "start"
+                },
+            ]
+        }
     }
 };
